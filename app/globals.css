@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-open-sans: 'Open Sans', system-ui, sans-serif;
+  --gold: #D4AF37;
+  --gold-light: #E5C766;
+  --gold-dark: #B8941F;
+  --ink: #0A0A0A;
+  --ink-soft: #1A1A1A;
+  --paper: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-open-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reusable component classes */
+@layer components {
+  .btn-gold {
+    @apply inline-block bg-gold text-ink font-semibold px-8 py-3.5
+           border-2 border-gold rounded-sm cursor-pointer
+           transition-all duration-300;
+  }
+
+  .btn-gold:hover {
+    @apply bg-ink text-gold shadow-gold;
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    @apply inline-block bg-transparent text-gold font-semibold px-8 py-3.5
+           border-2 border-gold rounded-sm cursor-pointer
+           transition-all duration-300;
+  }
+
+  .btn-outline:hover {
+    @apply bg-gold text-ink shadow-gold;
+    transform: translateY(-2px);
+  }
+
+  .section-title {
+    @apply text-4xl font-bold text-ink dark:text-paper text-center mb-8 tracking-tight;
+  }
+
+  .eyebrow {
+    @apply inline-block text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-3;
+  }
+
+  .divider-gold {
+    @apply mx-auto mt-5 h-px w-16 bg-gold;
+  }
+
+  .nav-link {
+    @apply relative text-ink font-medium cursor-pointer
+           transition-colors duration-300 hover:text-gold;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 -bottom-1.5 w-0 h-0.5 bg-gold
+           transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+/* Custom scrollbar - gold accent */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-dark);
+}

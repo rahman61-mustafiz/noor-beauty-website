@@ -1,6 +1,7 @@
 import { createAdminClient } from '@/lib/supabase/admin'
 import { galleryFilters } from '@/lib/gallery-data'
-import { uploadGalleryItem, updateGalleryItem, deleteGalleryItem } from './actions'
+import { updateGalleryItem, deleteGalleryItem } from './actions'
+import GalleryUploader from '@/app/components/admin/GalleryUploader'
 
 export const dynamic = 'force-dynamic'
 
@@ -26,30 +27,7 @@ export default async function AdminGallery() {
       <p className="mb-8 text-sm text-paper/50">{items.length} items. Upload photos or videos (max 50 MB each).</p>
 
       {/* Upload */}
-      <form
-        action={uploadGalleryItem}
-        className="mb-10 grid gap-4 rounded-sm border border-dashed border-paper/20 bg-ink-soft p-6 md:grid-cols-4"
-      >
-        <div className="md:col-span-2">
-          <label className="mb-1 block text-sm text-paper/70">File (image or video) *</label>
-          <input type="file" name="file" accept="image/*,video/*" required className={`${input} w-full file:mr-3 file:rounded-sm file:border-0 file:bg-gold file:px-3 file:py-1 file:text-ink`} />
-        </div>
-        <div>
-          <label className="mb-1 block text-sm text-paper/70">Category *</label>
-          <select name="category" required className={`${input} w-full`} defaultValue={CATEGORIES[0]}>
-            {CATEGORIES.map((c) => (
-              <option key={c} value={c}>{c}</option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label className="mb-1 block text-sm text-paper/70">Caption</label>
-          <input name="caption" className={`${input} w-full`} placeholder="Optional" />
-        </div>
-        <div className="md:col-span-4">
-          <button className="btn-gold">Upload</button>
-        </div>
-      </form>
+      <GalleryUploader categories={CATEGORIES} />
 
       {/* Existing items */}
       {items.length === 0 ? (

@@ -26,7 +26,7 @@ const stats = [
 export default async function AboutPage() {
   const siteConfig = await getSettings()
   return (
-    <main className="bg-paper dark:bg-ink">
+    <main className="bg-ash dark:bg-ink">
       {/* Header band */}
       <section className="bg-ink px-6 py-14 text-center text-paper">
         <span className="eyebrow">Our Story</span>
@@ -87,7 +87,7 @@ export default async function AboutPage() {
           {values.map(({ icon: Icon, title, text }) => (
             <div
               key={title}
-              className="rounded-sm border border-ink/10 bg-paper-off p-8 text-center
+              className="rounded-sm border border-ink/10 bg-paper p-8 text-center
                          transition-all duration-300 hover:-translate-y-1.5 hover:border-gold
                          hover:shadow-gold-lg dark:border-paper/10 dark:bg-ink-soft"
             >

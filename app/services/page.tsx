@@ -69,7 +69,7 @@ export default async function ServicesPage() {
   const siteConfig = await getSettings()
 
   return (
-    <main className="bg-paper dark:bg-ink">
+    <main className="bg-ash dark:bg-ink">
       {/* Header band */}
       <section className="bg-ink px-6 py-14 text-center text-paper">
         <h1 className="text-4xl font-bold tracking-tight text-gold md:text-5xl">Service List</h1>
@@ -104,14 +104,17 @@ export default async function ServicesPage() {
 
             {cat.kind === 'simple' && 'items' in cat && (
               <>
-                <div className="grid gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {cat.items.map((item: any) => (
-                    <div key={item.name} className="flex items-baseline justify-between gap-3 border-b border-ink/10 py-3 dark:border-paper/10">
-                      <span className="text-ink/80 dark:text-paper/80">
+                    <div
+                      key={item.name}
+                      className="flex items-start justify-between gap-3 rounded-sm border border-ink/10 bg-paper p-4 transition-all duration-300 hover:border-gold hover:shadow-gold-lg dark:border-paper/10 dark:bg-ink-soft"
+                    >
+                      <h4 className="text-sm font-semibold text-ink dark:text-paper">
                         {item.name}
                         {item.note && <span className="ml-2 text-xs uppercase tracking-wide text-gold">{item.note}</span>}
-                      </span>
-                      <span className="whitespace-nowrap font-semibold text-gold">{tk(item.price)}</span>
+                      </h4>
+                      <span className="whitespace-nowrap text-sm font-bold text-gold">{tk(item.price)}</span>
                     </div>
                   ))}
                 </div>

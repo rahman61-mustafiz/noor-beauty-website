@@ -33,7 +33,7 @@ export default function ServicesGrid({
   priceBySlug?: Record<string, number>
 }) {
   return (
-    <section className="bg-paper-off px-6 py-20 dark:bg-ink-soft">
+    <section className="bg-ash px-6 py-20 dark:bg-ink-soft">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="What We Offer"

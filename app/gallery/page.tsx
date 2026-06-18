@@ -25,7 +25,7 @@ export default async function GalleryPage() {
   }))
 
   return (
-    <main className="bg-paper dark:bg-ink">
+    <main className="bg-ash dark:bg-ink">
       {/* Header band */}
       <section className="bg-ink px-6 py-14 text-center text-paper">
         <span className="eyebrow">Our Work</span>

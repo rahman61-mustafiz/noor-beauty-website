@@ -21,7 +21,7 @@ export default function Testimonials({ items }: { items: Testimonial[] }) {
   if (!items.length) return null
   const testimonials = items
   return (
-    <section className="border-y border-ink/10 bg-paper px-6 py-20 dark:border-paper/10 dark:bg-ink">
+    <section className="border-y border-ink/10 bg-ash px-6 py-20 dark:border-paper/10 dark:bg-ink">
       <div className="mx-auto max-w-6xl">
         <SectionHeading eyebrow="Kind Words" title="What Our Clients Say" />
 
@@ -33,7 +33,7 @@ export default function Testimonials({ items }: { items: Testimonial[] }) {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="rounded-sm border-l-[3px] border-gold bg-paper-off p-6
+              className="rounded-sm border-l-[3px] border-gold bg-paper p-6
                          transition-all duration-300 hover:-translate-y-1.5 hover:shadow-gold-lg
                          dark:bg-ink-soft"
             >

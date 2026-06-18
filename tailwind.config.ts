@@ -24,6 +24,8 @@ const config: Config = {
           DEFAULT: '#FFFFFF',
           off: '#FAFAFA',
         },
+        // Soft "ash" grey — the light-mode page background.
+        ash: '#EAEAEA',
       },
       fontFamily: {
         sans: ['var(--font-open-sans)', 'system-ui', 'sans-serif'],

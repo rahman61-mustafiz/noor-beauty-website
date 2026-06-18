@@ -41,7 +41,7 @@ export default async function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
-      <body className="bg-paper text-ink antialiased dark:bg-ink dark:text-paper">
+      <body className="bg-ash text-ink antialiased dark:bg-ink dark:text-paper">
         <SettingsProvider value={settings}>
           <SiteChrome>{children}</SiteChrome>
         </SettingsProvider>

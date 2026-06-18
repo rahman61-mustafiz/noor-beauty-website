@@ -17,7 +17,7 @@ export default async function ContactPage() {
     { href: siteConfig.social.whatsapp, icon: FaWhatsapp, label: 'WhatsApp' },
   ]
   return (
-    <main className="bg-paper dark:bg-ink">
+    <main className="bg-ash dark:bg-ink">
       {/* Header band */}
       <section className="bg-ink px-6 py-14 text-center text-paper">
         <span className="eyebrow">Get in Touch</span>
@@ -89,7 +89,7 @@ export default async function ContactPage() {
         </div>
 
         {/* Form */}
-        <div className="rounded-sm border border-ink/10 bg-paper-off p-8 dark:border-paper/10 dark:bg-ink-soft">
+        <div className="rounded-sm border border-ink/10 bg-paper p-8 dark:border-paper/10 dark:bg-ink-soft">
           <h2 className="mb-6 text-2xl font-bold text-ink dark:text-paper">Send a Message</h2>
           <ContactForm />
         </div>

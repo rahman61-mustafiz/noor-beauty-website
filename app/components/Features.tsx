@@ -19,7 +19,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-paper px-6 py-20 dark:bg-ink">
+    <section className="bg-ash px-6 py-20 dark:bg-ink">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Why Noor"
@@ -30,7 +30,7 @@ export default function Features() {
           {features.map(({ icon: Icon, title, text }) => (
             <div
               key={title}
-              className="group rounded-sm border border-ink/10 bg-paper-off p-7 text-center
+              className="group rounded-sm border border-ink/10 bg-paper p-7 text-center
                          transition-all duration-300 hover:-translate-y-1.5 hover:border-gold
                          hover:shadow-gold-lg dark:border-paper/10 dark:bg-ink-soft"
             >

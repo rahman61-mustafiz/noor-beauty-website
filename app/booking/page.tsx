@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default async function BookingPage() {
   const siteConfig = await getSettings()
   return (
-    <main className="bg-paper dark:bg-ink">
+    <main className="bg-ash dark:bg-ink">
       {/* Header band */}
       <section className="bg-ink px-6 py-14 text-center text-paper">
         <span className="eyebrow">Reserve Your Spot</span>
@@ -25,7 +25,7 @@ export default async function BookingPage() {
       </section>
 
       <div className="mx-auto max-w-2xl px-6 py-16">
-        <div className="rounded-sm border border-ink/10 bg-paper-off p-8 dark:border-paper/10 dark:bg-ink-soft">
+        <div className="rounded-sm border border-ink/10 bg-paper p-8 dark:border-paper/10 dark:bg-ink-soft">
           <Suspense fallback={<p className="text-ink/50 dark:text-paper/50">Loading…</p>}>
             <BookingForm />
           </Suspense>
